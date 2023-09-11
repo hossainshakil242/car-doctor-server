@@ -77,7 +77,7 @@ async function run() {
             // console.log(req.headers.authorization);
             const decoded= req.decoded;
             console.log('came bak after verify', decoded);
-            //? extra verify 
+            // extra verify 
             if(decoded.email !== req.query.email){
                 return res.status(403).end({error: 1, message: 'forbidden access'});
             }
